@@ -1,0 +1,430 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+::selection {
+	background-color: var(--primary-color);
+	color: var(--dark-gray-color);
+}
+
+:root {
+	--white-color: #fff;
+	--black-color: #000;
+	--dark-gray-color: #0b0e13;
+	--dark-gray-color-2: #364153;
+	--gray-color: #a8abb1;
+  --gray-color-2: #d1d6dc;
+	--gray-color-3:#99a1af;
+	--primary-color: #cbfe1c;
+	--border-linear: linear-gradient(to right, #cbfe1c, #08E073);
+}
+
+body {
+	background-color: var(--dark-gray-color);
+	color: var(--white-color);
+}
+
+/*Static Style*/
+
+.primary-color-bg {
+  background-color: var(--primary-color);
+}
+
+.primary-color-text {
+  color: var(--primary-color);
+}
+
+
+.dark-gray-color-bg {
+  background-color: var(--dark-gray-color);
+}
+
+.dark-gray-color-text {
+  color: var(--dark-gray-color);
+}
+
+.container{
+	padding: 100px 0;
+}
+
+
+
+/*Fonts*/
+@font-face {
+	font-family: "bold";
+	src: url("../Chakra_Petch,Days_One/ChakraPetch-Bold.ttf");
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "medium";
+	src: url("../Chakra_Petch,Days_One/ChakraPetch-Medium.ttf");
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "regular";
+	src: url("../Chakra_Petch,Days_One/ChakraPetch-Regular.ttf");
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "light";
+	src: url("../Chakra_Petch,Days_One/ChakraPetch-Light.ttf");
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "semi-bold";
+	src: url("../Chakra_Petch,Days_One/ChakraPetch-SemiBold.ttf");
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "days-one-regular";
+	src: url("../Chakra_Petch,Days_One/DaysOne-Regular.ttf");
+	font-display: swap;
+}
+
+/*btn glow effect on hover*/
+
+button{
+  position: relative;
+  overflow: hidden;
+	transition: all 0.3s ease-in-out;
+}
+
+button::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: -150%;
+	width: 50px;
+	height: 100%;
+	background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+	transition: left 0.7s ease-in-out;
+}
+
+button:hover::before {
+	left: 150%;
+}
+
+
+/*Navbar*/
+.navbar {
+	background-color: var(--dark-gray-color);
+	border-bottom: 1px solid var(--dark-gray-color-2);
+	top: 0;
+	z-index: 1000;
+}
+
+.navbar-brand {
+	font-family: "bold";
+	color: var(--primary-color);
+}
+
+.navbar .icons i {
+	color: var(--white-color);
+	cursor: pointer;
+	font-size: 20px;
+	transition: all 0.3s ease-in-out;
+}
+
+.navbar .icons i:hover {
+	color: var(--primary-color);
+}
+
+.nav-link {
+	color: var(--white-color);
+	font-family: "medium";
+}
+.nav-link:hover,
+.nav-link:focus {
+	color: var(--primary-color);
+}
+
+.navbar-nav .nav-link.active {
+	color: var(--primary-color);
+}
+
+.navbar button {
+	background-color: var(--primary-color);
+	color: var(--dark-gray-color);
+	font-family: "bold";
+	transition: all 0.3s ease-in-out;
+	position: relative;
+	overflow: hidden;
+}
+
+.navbar button::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: -150%;
+	width: 50px;
+	height: 100%;
+	background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+	transition: left 0.7s ease-in-out;
+}
+
+.navbar button:hover::before {
+	left: 150%;
+}
+
+.navbar button:hover {
+	background-color: #c9fe1c98;
+	color: var(--dark-gray-color);
+}
+
+/*Hero Section*/
+
+
+.hero-section{
+  background-image: url("../image/hero-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+	background-attachment: fixed;
+  /* min-height: 100vh; */
+  position: relative;
+}
+
+.hero-section::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.842);
+  z-index: 1;
+}
+
+
+
+.hero-section .left-section h1{
+  font-family: "days-one-regular";
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 75px;
+}
+
+.hero-section .left-section h1 span{
+  color: var(--primary-color);
+}
+
+.hero-section .left-section p{
+  font-family: "regular";
+  font-size: 16px;
+  line-height: 26px;
+  color: var(--gray-color-2);
+}
+
+.hero-section .left-section .btns button{
+	font-family: "bold";
+	font-size: 16px;
+	border: 2px solid var(--primary-color);
+}
+
+.hero-section .left-section .btns button:first-child:hover{
+	background-color: #c9fe1c98;
+	color: var(--dark-gray-color);
+}
+
+.hero-section .left-section .btns button:last-child:hover{
+	background-color: var(--primary-color);
+	color: var(--dark-gray-color);
+}
+
+.hero-section .right-section .img{
+	background: var(--border-linear);
+	padding: 5px;
+}
+
+.hero-section .right-section .label{
+	border: 1px solid var(--dark-gray-color-2);
+	bottom: -25px;
+	left: -25px;
+}
+
+.hero-section .right-section .label i{
+	color: var(--primary-color);
+	font-size: 24px;
+}
+
+.hero-section .right-section .label .text p{
+	font-family: "regular";
+	font-size: 12px;
+	line-height: 16px;
+	color: var(--gray-color-3);
+}
+
+.hero-section .right-section .label .text span{
+	font-family: "bold";
+	font-size: 20px;
+	line-height: 28px;
+	color: var(--white-color);
+}
+
+
+
+/*Latest Games Section*/
+.header span{
+	font-family: "bold";
+	font-size: 16px;
+	line-height: 24px;
+	color: var(--primary-color);
+	position: relative;
+}
+
+.header span::before{
+	content: "";
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: -80%;
+	width: 60px;
+	height: 2px;
+	background: linear-gradient(to left, var(--primary-color), transparent);
+}
+
+.header span::after{
+	content: "";
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: -80%;
+	width: 60px;
+	height: 2px;
+	background: linear-gradient(to right, var(--primary-color), transparent);
+}
+
+.header h2{
+	font-family: "days-one-regular";
+	font-weight: 700;
+	font-size: 48px;
+	line-height: 48px;
+	color: var(--white-color);
+}
+
+.img-card{
+	transition: all 0.3s ease-in-out;
+	cursor: pointer;
+	z-index: 2;
+}
+
+.img-card::after{
+	content: "";
+	position: absolute;
+	bottom: -100px;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to top, var(--primary-color), transparent 50%);
+	z-index: 1;
+	transition: all 0.3s ease-in-out;
+}
+
+.img-card:hover {
+	border: 2px solid var(--primary-color);
+}
+
+.img-card:hover::after{
+	bottom: 0;
+}
+
+
+.img-card .img img{
+	transition: all 0.5s ease-in-out;
+}
+
+.img-card:hover img{
+	transform: scale(1.05);
+}
+
+.img-card .label{
+	top: -100px;
+	left: 10px;
+	transition: all 0.3s ease-in-out;
+}
+
+.img-card:hover .label{
+	top: 15px;
+}
+
+
+.img-card .label i{
+	color: var(--primary-color);
+	font-size: 12px;
+}
+
+.img-card .label span{
+	font-family: "regular";
+	font-size: 12px;
+	line-height: 16px;
+	color: var(--white-color);
+}
+
+.img-card .label div{
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.img-card .card-text{
+	bottom: -100px;
+	left: 10px;
+	transition: all 0.3s ease-in-out;
+	z-index: 2;
+}
+
+.img-card:hover .card-text{
+	bottom: 15px;
+}
+
+.img-card .card-text p{
+	font-family: "bold";
+	font-size: 18px;
+	line-height: 24px;
+	color: var(--black-color);
+}
+
+.carousel-control-prev,
+.carousel-control-next{
+	height: 50px;
+	width: 50px;
+	background-color: transparent;
+	border: 2px solid var(--gray-color-3);
+	border-radius: 50%;
+	position:relative;
+	transition: all 0.3s ease-in-out;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-prev:focus,
+.carousel-control-next:hover,
+.carousel-control-next:focus{
+	border-color: var(--primary-color);
+}
+
+.carousel-control-prev:hover i,
+.carousel-control-prev:focus i,
+.carousel-control-next:hover i,
+.carousel-control-next:focus i{
+	color: var(--primary-color);
+}
+
+.view-all{
+	background-color: transparent;
+	color: var(--primary-color);
+	border: 2px solid var(--primary-color);
+	font-family: "bold";
+	font-size: 16px;
+	line-height: 24px;
+	cursor: pointer;
+}
+
+.view-all:hover{
+	background-color: var(--primary-color);
+	color: var(--black-color);
+}
