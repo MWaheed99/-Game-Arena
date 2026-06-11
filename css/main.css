@@ -1,4 +1,4 @@
-* {
+*{
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
@@ -14,6 +14,9 @@
 	--black-color: #000;
 	--dark-gray-color: #0b0e13;
 	--dark-gray-color-2: #364153;
+	--dark-gray-color-3:#1A1A1A;
+	--dark-gray-color-4:#1E2939;
+	--dark-gray-color-5:#101725;
 	--gray-color: #a8abb1;
   --gray-color-2: #d1d6dc;
 	--gray-color-3:#99a1af;
@@ -43,6 +46,22 @@ body {
 
 .dark-gray-color-text {
   color: var(--dark-gray-color);
+}
+
+.dark-gray-color-2-bg {
+	background-color: var(--dark-gray-color-2);
+}
+
+.dark-gray-color-3-bg {
+	background-color: var(--dark-gray-color-3);
+}
+
+.dark-gray-color-4-bg {
+	background-color: var(--dark-gray-color-4);
+}
+
+.linear-gradient-bg {
+	background: var(--border-linear);
 }
 
 .container{
@@ -271,7 +290,7 @@ button:hover::before {
 
 
 /*Latest Games Section*/
-.header span{
+.header .section-name{
 	font-family: "bold";
 	font-size: 16px;
 	line-height: 24px;
@@ -279,7 +298,7 @@ button:hover::before {
 	position: relative;
 }
 
-.header span::before{
+.header .section-name::before{
 	content: "";
 	position: absolute;
 	top: 50%;
@@ -290,7 +309,7 @@ button:hover::before {
 	background: linear-gradient(to left, var(--primary-color), transparent);
 }
 
-.header span::after{
+.header .section-name::after{
 	content: "";
 	position: absolute;
 	top: 50%;
@@ -307,6 +326,17 @@ button:hover::before {
 	font-size: 48px;
 	line-height: 48px;
 	color: var(--white-color);
+}
+
+.header p{
+	font-family: "bold";
+	font-size: 48px;
+	line-height: 48px;
+	color: var(--white-color);
+}
+
+.header p span{
+	color: var(--primary-color);
 }
 
 .img-card{
@@ -427,4 +457,348 @@ button:hover::before {
 .view-all:hover{
 	background-color: var(--primary-color);
 	color: var(--black-color);
+}
+
+/*WHAT WE DO SECTION*/
+
+.what-we-do .card{
+	border-color: var(--dark-gray-color-2);
+	overflow: hidden;
+	transition: all 0.3s ease-in-out;
+}
+
+.what-we-do .card::before{
+	content: "";
+	position: absolute;
+	top: -15px;
+	left: -15px;
+	border-top: 10px solid var(--primary-color);
+	border-left: 10px solid var(--primary-color);
+	border-right: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+	width: 0;
+	height: 0;
+	transition: all 0.3s ease-in-out;
+}
+
+.what-we-do .card::after{
+	content: "";
+	position: absolute;
+	bottom: -15px;
+	right: -15px;
+	border-top: 10px solid transparent;
+	border-left: 10px solid transparent;
+	border-right: 10px solid var(--primary-color);
+	border-bottom: 10px solid var(--primary-color);
+	width: 0;
+	height: 0;
+	transition: all 0.3s ease-in-out;
+}
+
+.what-we-do .card:hover{
+	border-color: var(--primary-color);
+}
+
+.what-we-do .card:hover::before{
+	top: 15px;
+	left: 15px;
+}
+.what-we-do .card:hover::after{
+	bottom: 15px;
+	right: 15px;
+}
+
+.what-we-do .card .icon,
+.what-we-do .card i{
+	transition: all 0.3s ease-in-out;
+}
+
+.what-we-do .card:hover .icon{
+	background-color: var(--primary-color);
+}
+
+.what-we-do .card:hover i{
+	color: var(--dark-gray-color);
+}
+
+.what-we-do .card p{
+	font-family: "days-one-regular";
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 25px;
+	color: var(--white-color);
+}
+
+
+/*sponsors Animation*/
+
+.sponsors{
+	margin-top: 50px;
+	padding-top: 100px;
+	position: relative;
+}
+
+.sponsors::before{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 60%;
+	height: 2px;
+	background: linear-gradient(to right, transparent, var(--primary-color), transparent);
+	box-shadow: 0px 0px 10px var(--primary-color);
+	z-index: 1;
+}
+
+/*background glow*/
+
+.sponsors::after{
+	content: "";
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 100%;
+	height: 60%;
+	border-radius: 50%;
+	background: var(--primary-color);
+  border-radius: 50%;
+  filter: blur(50px);
+  z-index: -1;
+}
+
+.sponsors-wrapper{
+	position: relative;
+}
+
+/*card disappear effect*/
+
+.sponsors-wrapper::before{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100px;
+	height: 100%;
+	background: linear-gradient(to right, #000000d8, transparent);
+	z-index: 1;
+}
+
+.sponsors-wrapper::after{
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100px;
+	height: 100%;
+	background: linear-gradient(to left, #000000d8, transparent);
+	z-index: 1;
+}
+
+
+
+.sponsors-slide-one{
+	min-width: max-content;
+	animation: scroll-left 60s linear infinite;
+}
+
+.sponsors-slide-one .img{
+	width: 100px;
+	height: 100px;
+}
+
+.sponsors-slide-two{
+  min-width: max-content;
+  animation: scroll-right 60s linear infinite;
+}
+
+.sponsors-slide-two .img{
+	width: 100px;
+	height: 100px;
+}
+
+@keyframes scroll-left {
+	0% {
+		transform: translateX(0);
+	}
+	50% {
+		transform: translateX(-50%);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+
+@keyframes scroll-right {
+	0% {
+		transform: translateX(-50%);
+	}
+	50% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-50%);
+	}
+}
+
+
+/*our team*/
+
+.our-team .header p,
+.contact-us .header p{
+	font-family: "regular";
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 28px;
+	color: var(--gray-color);
+}
+
+.our-team .team-card{
+	transition: all 0.3s ease-in-out;
+}
+
+.our-team .team-card .layout{ 
+	backdrop-filter: grayscale() brightness(0.8);
+  -webkit-backdrop-filter: grayscale() brightness(0.8);
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	border-radius: 15px;
+	transition: transform .8s cubic-bezier(.4,0,.2,1);
+	transition: all 0.5s ease-out;
+}
+
+.our-team .team-card:hover .layout{
+	height: 0
+}
+
+.our-team .team-card .team-info{
+	padding: 10px;
+	bottom: 0;
+	left: 0;
+}
+
+.our-team .team-card:hover .team-info{
+	backdrop-filter: blur(0px);
+}
+
+.our-team .team-card .team-info h3{
+	font-family: "days-one-regular";
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 28px;
+	color: var(--white-color);
+	margin: 0;
+}
+
+.our-team .team-card .team-info p{
+	font-family: "regular";
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 28px;
+	color: var(--primary-color);
+	margin: 0;
+}
+
+.our-team .team-card .team-info .acheivement{
+	font-family: "regular";
+	font-weight: 700;
+	font-size: 12px;
+	line-height: 16px;
+	color: var(--gray-color);
+}
+
+.our-team .team-card .team-info .nick-name{
+	font-family: "bold";
+	font-size: 18px;
+	line-height: 28px;
+	color: var(--primary-color);
+	writing-mode: vertical-rl; // to make the text vertical because rotate make the text get out the border
+}
+
+/*contact us*/
+
+.contact-us{
+	background: var(--dark-gray-color-5);
+}
+
+.contact-us .icon{
+	width: 65px;
+	height: 65px;
+}
+
+.contact-us .socials .icon{
+	width: 50px;
+	height: 50px;
+}
+
+.contact-us .contact-info p{
+	margin: 0;
+	font-family: "days-one-regular";
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 28px;
+	color: var(--white-color);
+}
+
+.contact-us .contact-info span{
+	font-family: "regular";
+	font-size: 16px;
+	line-height: 24px;
+	color: var(--gray-color);
+}
+
+.contact-us .our-comunity p{
+	margin: 0;
+	font-family: "days-one-regular";
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 28px;
+}
+
+.contact-us .our-comunity span{
+	font-family: "regular";
+	font-size: 16px;
+	line-height: 24px;
+}
+
+
+/*Form*/
+
+form h3{
+	font-family: "days-one-regular";
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 32px;
+	color: var(--white-color);
+}
+
+.form-label{
+	font-family: "bold";
+	font-size: 16px;
+	line-height: 24px;
+	color: var(--gray-color);
+}
+
+.form-control,
+.form-select {
+	border-color: #4A5565;
+	color: var(--gray-color);
+}
+
+.form-control:focus,
+.form-select:focus {
+	border-color: var(--primary-color);
+	border-width: 2px;
+	background-color: var(--dark-gray-color-2);
+	box-shadow: none;
+}
+
+.form-control::placeholder {
+	font-family: "regular";
+	font-size: 16px;
+	line-height: 24px;
+	color: var(--gray-color);
 }
