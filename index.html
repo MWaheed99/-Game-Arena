@@ -1,14 +1,23 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
   <head>
-    <link rel="stylesheet" href="/css/all.min.css">
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is a GameArena website">
+    <meta name="keywords" content="GameArena">
+    <meta name="author" content="M.Waheed">
+    <link rel="icon" href="./image/go-major.jpg">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <title>GameArena Website</title>
   </head>
 
-  <body>
+  <body data-bs-spy="scroll" data-bs-target="#navId">
     <!---------Navbar--------->
-    <nav class="navbar navbar-expand-lg p-3 position-sticky w-100">
+    <nav id="navId" class="navbar navbar-expand-lg p-3 position-fixed w-100">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
           <i class="fa-solid fa-gamepad mx-2"></i>
@@ -21,19 +30,19 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link active" aria-current="page" href="#home">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">OUR GAMES</a>
+              <a class="nav-link" href="#our-games">OUR GAMES</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">What We Do</a>
+              <a class="nav-link" href="#what-we-do">What We Do</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Our Team</a>
+              <a class="nav-link" href="#our-team">Our Team</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contact Us</a>
+              <a class="nav-link" href="#contact">Contact Us</a>
             </li>
           </ul>
           <div class="d-flex align-items-center gap-3">
@@ -47,28 +56,29 @@
       </div>
     </nav>
     <!---------Hero Section--------->
-    <header class="hero-section pt-5 d-flex align-items-center">
+    <header id="home" class="hero-section pt-5 d-flex align-items-center">
       <div class="container w-100 position-relative z-1">
-        <div class="row">
-          <div class="left-section col-md-6 col-sm-12">
+        <div class="row gy-4">
+          <div class="left-section col-lg-6 col-md-12">
             <h1 class="mb-3">
-              THE ULTIMATE
-              <span>GAMING</span>
+              THE ULTIMATE <br>
+              <span>GAMING</span> <br>
               EXPERIENCE
             </h1>
             <p>
               Join millions of gamers worldwide in the most competitive eSports tournaments. Experience next-level
               gaming with cutting-edge technology and endless possibilities.
             </p>
-            <div class="btns d-flex align-items-center gap-3">
+            <div class="btns d-flex flex-column flex-lg-row align-items-stretch align-items-lg-center gap-3">
               <button class="btn px-4 py-3 primary-color-bg dark-gray-color-text">Start Gaming Now</button>
-              <button class="btn px-4 py-3 primary-color-text">Watch Tournaments</button>
+              <button class="btn px-4 py-3 primary-color-text ">Watch Tournaments</button>
             </div>
           </div>
-          <div class="right-section col-md-6 col-sm-12">
+          <div class="right-section col-lg-6 col-md-12">
             <div class="img w-100 h-75 rounded-4 position-relative">
               <img src="./image/hero-img.png" alt="Hero-Section-Image" class="w-100 h-100 rounded-4">
-              <div class="label position-absolute d-flex align-items-center gap-3 dark-gray-color-bg p-4 rounded-3">
+              <div
+                class="label position-absolute d-flex align-items-center gap-3 dark-gray-color-bg p-2 p-md-4 rounded-3">
                 <i class="fa-solid fa-trophy"></i>
                 <div class="text">
                   <p class="mb-0">Active Players</p>
@@ -81,17 +91,17 @@
       </div>
     </header>
     <!---------Our Latest Games--------->
-    <section>
+    <section id="our-games">
       <div class="container">
         <div class="header text-center mb-5">
-          <span>OUR GAMES</span>
+          <span class="section-name">OUR GAMES</span>
           <h2 class="mt-3">Our Latest Games</h2>
         </div>
         <div id="carouselExample" class="carousel slide">
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <div class="row">
-                <div class="col-md-4">
+              <div class="row gy-3">
+                <div class="col-12 col-md-6 col-lg-4">
                   <div class="img-card position-relative overflow-hidden rounded-4 h-100">
                     <div class="img w-100 h-100 rounded-4 overflow-hidden position-relative">
                       <img src="./image/latest-games-1.png" alt="Latest-Game" class="w-100 h-100 rounded-4">
@@ -113,7 +123,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-12 col-md-6 col-lg-4 d-none d-md-block">
                   <div class="img-card position-relative overflow-hidden rounded-4 h-100">
                     <div class="img w-100 h-100 rounded-4 overflow-hidden position-relative">
                       <img src="./image/latest-games-2.png" alt="Latest-Game" class="w-100 h-100 rounded-4">
@@ -135,7 +145,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-12 col-md-6 col-lg-4 d-none d-lg-block">
                   <div class="img-card position-relative overflow-hidden rounded-4 h-100">
                     <div class="img w-100 h-100 rounded-4 overflow-hidden position-relative">
                       <img src="./image/latest-games-3.png" alt="Latest-Game" class="w-100 h-100 rounded-4">
@@ -160,8 +170,8 @@
               </div>
             </div>
             <div class="carousel-item">
-              <div class="row">
-                <div class="col-md-4">
+              <div class="row gy-3">
+                <div class="col-12 col-md-6 col-lg-4">
                   <div class="img-card position-relative overflow-hidden rounded-4 h-100">
                     <div class="img w-100 h-100 rounded-4 overflow-hidden position-relative">
                       <img src="./image/latest-games-4.png" alt="Latest-Game" class="w-100 h-100 rounded-4">
@@ -183,7 +193,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-12 col-md-6 col-lg-4 d-none d-md-block">
                   <div class="img-card position-relative overflow-hidden rounded-4 h-100">
                     <div class="img w-100 h-100 rounded-4 overflow-hidden position-relative">
                       <img src="./image/latest-games-5.png" alt="Latest-Game" class="w-100 h-100 rounded-4">
@@ -205,7 +215,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-12 col-md-6 col-lg-4 d-none d-lg-block">
                   <div class="img-card position-relative overflow-hidden rounded-4 h-100">
                     <div class="img w-100 h-100 rounded-4 overflow-hidden position-relative">
                       <img src="./image/latest-games-6.png" alt="Latest-Game" class="w-100 h-100 rounded-4">
@@ -230,8 +240,8 @@
               </div>
             </div>
             <div class="carousel-item">
-              <div class="row">
-                <div class="col-md-4">
+              <div class="row gy-3">
+                <div class="col-12 col-md-6 col-lg-4">
                   <div class="img-card position-relative overflow-hidden rounded-4 h-100">
                     <div class="img w-100 h-100 rounded-4 overflow-hidden position-relative">
                       <img src="./image/latest-games-7.png" alt="Latest-Game" class="w-100 h-100 rounded-4">
@@ -253,7 +263,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-12 col-md-6 col-lg-4 d-none d-md-block">
                   <div class="img-card position-relative overflow-hidden rounded-4 h-100">
                     <div class="img w-100 h-100 rounded-4 overflow-hidden position-relative">
                       <img src="./image/latest-games-8.png" alt="Latest-Game" class="w-100 h-100 rounded-4">
@@ -275,7 +285,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-12 col-md-6 col-lg-4 d-none d-lg-block">
                   <div class="img-card position-relative overflow-hidden rounded-4 h-100">
                     <div class="img w-100 h-100 rounded-4 overflow-hidden position-relative">
                       <img src="./image/latest-games-9.png" alt="Latest-Game" class="w-100 h-100 rounded-4">
@@ -300,8 +310,9 @@
               </div>
             </div>
           </div>
-          <div class="d-flex align-items-center justify-content-center gap-3 mt-4">
-            <div class="btns d-flex align-items-center gap-3">
+          <div
+            class="d-flex flex-column flex-md-row  align-items-stretch align-items-md-center justify-content-center gap-3 mt-4">
+            <div class="btns d-flex align-items-center justify-content-center gap-3">
               <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
                 data-bs-slide="prev">
                 <i class="fa-solid fa-arrow-left"></i>
@@ -318,17 +329,17 @@
     </section>
 
     <!---------What We Do--------->
-    <section class="what-we-do">
+    <section id="what-we-do" class="what-we-do">section
       <div class="container">
         <div class="header text-center mb-5">
           <span class="section-name">WHAT WE DO</span>
           <h2 class="mt-3">More Than Just Games</h2>
           <p>We Build <span>Interactive</span> Journeys</p>
         </div>
-        <div class="row">
-          <div class="col-lg-3 col-md-6 col-sm-12 gy-4">
+        <div class="row gy-4">
+          <div class="col-lg-3 col-sm-6">
             <div
-              class="card h-100 d-flex flex-column align-items-center justify-content-center gap-3 rounded-4 border-1 dark-gray-color-3-bg">
+              class="card h-100 p-5 d-flex flex-column align-items-center justify-content-center gap-3 rounded-4 border-1 dark-gray-color-3-bg">
               <div class="icon p-4 dark-gray-color-4-bg rounded-2">
                 <i class="fa fa-desktop primary-color-text fs-4"></i>
               </div>
@@ -338,7 +349,7 @@
               </p>
             </div>
           </div>
-          <div class="col-lg-3 col-md-6 col-sm-12 gy-4">
+          <div class="col-lg-3 col-sm-6">
             <div
               class="card h-100 p-5 d-flex flex-column align-items-center justify-content-center gap-3 rounded-4 border-1 dark-gray-color-3-bg">
               <div class="icon p-4 dark-gray-color-4-bg rounded-2">
@@ -350,12 +361,12 @@
               </p>
             </div>
           </div>
-          <div class="col-lg-3 col-md-6 col-sm-12 gy-4">
-            <div class="rounded-4 border-1 dark-gray-color-3-bg overflow-hidden">
-              <img src="./image/what-we-do-1.png" class="w-100" alt="">
+          <div class="col-lg-3 col-sm-6">
+            <div class="rounded-4 border-1 dark-gray-color-3-bg overflow-hidden h-100">
+              <img src="./image/what-we-do-1.png" class="w-100 h-100" alt="">
             </div>
           </div>
-          <div class="col-lg-3 col-md-6 col-sm-12 gy-4">
+          <div class="col-lg-3 col-sm-6">
             <div
               class="card h-100 p-5 d-flex flex-column align-items-center justify-content-center gap-3 rounded-4 border-1 dark-gray-color-3-bg">
               <div class="icon p-4 dark-gray-color-4-bg rounded-2">
@@ -367,9 +378,9 @@
               </p>
             </div>
           </div>
-          <div class="col-lg-3 col-md-6 col-sm-12 gy-4">
+          <div class="col-lg-3 col-sm-6">
             <div
-              class="card h-100 d-flex flex-column align-items-center justify-content-center gap-3 rounded-4 border-1 dark-gray-color-3-bg">
+              class="card h-100 p-5 d-flex flex-column align-items-center justify-content-center gap-3 rounded-4 border-1 dark-gray-color-3-bg">
               <div class="icon p-4 dark-gray-color-4-bg rounded-2">
                 <i class="fa fa-cubes primary-color-text fs-4"></i>
               </div>
@@ -379,12 +390,12 @@
               </p>
             </div>
           </div>
-          <div class="col-lg-3 col-md-6 col-sm-12 gy-4">
-            <div class="rounded-4 border-1 dark-gray-color-3-bg overflow-hidden">
-              <img src="./image/what-we-do-2.png" class="w-100" alt="">
+          <div class="col-lg-3 col-sm-6">
+            <div class="rounded-4 border-1 dark-gray-color-3-bg overflow-hidden h-100">
+              <img src="./image/what-we-do-2.png" class="w-100 h-100" alt="">
             </div>
           </div>
-          <div class="col-lg-3 col-md-6 col-sm-12 gy-4">
+          <div class="col-lg-3 col-sm-6">
             <div
               class="card h-100 p-5 d-flex flex-column align-items-center justify-content-center gap-3 rounded-4 border-1 dark-gray-color-3-bg">
               <div class="icon p-4 dark-gray-color-4-bg rounded-2">
@@ -396,7 +407,7 @@
               </p>
             </div>
           </div>
-          <div class="col-lg-3 col-md-6 col-sm-12 gy-4">
+          <div class="col-lg-3 col-sm-6">
             <div
               class="card h-100 p-5 d-flex flex-column align-items-center justify-content-center gap-3 rounded-4 border-1 dark-gray-color-3-bg">
               <div class="icon p-4 dark-gray-color-4-bg rounded-2">
@@ -569,15 +580,15 @@
 
     <!---------Our Team--------->
 
-    <section class="our-team">
+    <section id="our-team" class="our-team">
       <div class="container">
         <div class="header text-center mb-5">
           <span class="section-name">OUR TEAM</span>
           <h2 class="mt-3">Our Best Team Members</h2>
           <p>Meet the professional gamers and experts behind our success</p>
         </div>
-        <div class="row">
-          <div class="col-lg-3 col-md-6 col-sm-12 gy-4">
+        <div class="row gy-4">
+          <div class="col-lg-3 col-sm-6">
             <div class="team-card position-relative">
               <div class="img w-100 h-100 rounded-4 overflow-hidden">
                 <img src="./image/avatar-1.png" alt="team-image" class="w-100 h-100">
@@ -597,7 +608,7 @@
               <div class="layout position-absolute"></div>
             </div>
           </div>
-          <div class="col-lg-3 col-md-6 col-sm-12 gy-4">
+          <div class="col-lg-3 col-sm-6">
             <div class="team-card position-relative">
               <div class="img w-100 h-100 rounded-4 overflow-hidden">
                 <img src="./image/avatar-2.png" alt="team-image" class="w-100 h-100">
@@ -617,7 +628,7 @@
               <div class="layout position-absolute"></div>
             </div>
           </div>
-          <div class="col-lg-3 col-md-6 col-sm-12 gy-4">
+          <div class="col-lg-3 col-sm-6">
             <div class="team-card position-relative">
               <div class="img w-100 h-100 rounded-4 overflow-hidden">
                 <img src="./image/avatar-3.png" alt="team-image" class="w-100 h-100">
@@ -637,7 +648,7 @@
               <div class="layout position-absolute"></div>
             </div>
           </div>
-          <div class="col-lg-3 col-md-6 col-sm-12 gy-4">
+          <div class="col-lg-3 col-sm-6">
             <div class="team-card position-relative">
               <div class="img w-100 h-100 rounded-4 overflow-hidden">
                 <img src="./image/avatar-4.png" alt="team-image" class="w-100 h-100">
@@ -657,7 +668,7 @@
               <div class="layout position-absolute"></div>
             </div>
           </div>
-          <div class="col-lg-3 col-md-6 col-sm-12 gy-4">
+          <div class="col-lg-3 col-sm-6">
             <div class="team-card position-relative">
               <div class="img w-100 h-100 rounded-4 overflow-hidden">
                 <img src="./image/avatar-5.png" alt="team-image" class="w-100 h-100">
@@ -677,7 +688,7 @@
               <div class="layout position-absolute"></div>
             </div>
           </div>
-          <div class="col-lg-3 col-md-6 col-sm-12 gy-4">
+          <div class="col-lg-3 col-sm-6">
             <div class="team-card position-relative">
               <div class="img w-100 h-100 rounded-4 overflow-hidden">
                 <img src="./image/avatar-6.png" alt="team-image" class="w-100 h-100">
@@ -697,7 +708,7 @@
               <div class="layout position-absolute"></div>
             </div>
           </div>
-          <div class="col-lg-3 col-md-6 col-sm-12 gy-4">
+          <div class="col-lg-3 col-sm-6">
             <div class="team-card position-relative">
               <div class="img w-100 h-100 rounded-4 overflow-hidden">
                 <img src="./image/avatar-7.png" alt="team-image" class="w-100 h-100">
@@ -717,7 +728,7 @@
               <div class="layout position-absolute"></div>
             </div>
           </div>
-          <div class="col-lg-3 col-md-6 col-sm-12 gy-4">
+          <div class="col-lg-3 col-sm-6">
             <div class="team-card position-relative">
               <div class="img w-100 h-100 rounded-4 overflow-hidden">
                 <img src="./image/avatar-8.png" alt="team-image" class="w-100 h-100">
@@ -742,19 +753,19 @@
     </section>
 
     <!---------Contact Us--------->
-    <section class="contact-us">
+    <section id="contact" class="contact-us">
       <div class="container">
         <div class="header text-center mb-5">
           <span class="section-name">CONTACT US</span>
           <h2 class="mt-3">Get In Touch</h2>
           <p>Have questions or need support? We're here to help!</p>
         </div>
-        <div class="row">
+        <div class="row gy-4">
           <div class="col-lg-6 col-md-12">
             <div class="dark-gray-color-4-bg rounded-4 mb-4">
-              <div class="p-5 d-flex align-items-center gap-4">
+              <div class="p-3 p-sm-5 d-flex align-items-center gap-4">
                 <div class="icon d-flex align-items-center justify-content-center primary-color-bg rounded-circle">
-                  <i class="fa-solid fa-location-dot fs-4 dark-gray-color-text"></i>
+                  <i class="fa-solid fa-location-dot dark-gray-color-text"></i>
                 </div>
                 <div class="contact-info">
                   <p>Our Location</p>
@@ -763,9 +774,9 @@
               </div>
             </div>
             <div class="dark-gray-color-4-bg rounded-4 mb-4">
-              <div class="p-5 d-flex align-items-center gap-4">
+              <div class="p-3 p-sm-5 d-flex align-items-center gap-4">
                 <div class="icon d-flex align-items-center justify-content-center primary-color-bg rounded-circle">
-                  <i class="fa-solid fa-phone fs-4 dark-gray-color-text"></i>
+                  <i class="fa-solid fa-phone  dark-gray-color-text"></i>
                 </div>
                 <div class="contact-info">
                   <p>Phone Number</p>
@@ -774,9 +785,9 @@
               </div>
             </div>
             <div class="dark-gray-color-4-bg rounded-4 mb-4">
-              <div class="p-5 d-flex align-items-center gap-4">
+              <div class="p-3 p-sm-5 d-flex align-items-center gap-4">
                 <div class="icon d-flex align-items-center justify-content-center primary-color-bg rounded-circle">
-                  <i class="fa-solid fa-location-dot fs-4 dark-gray-color-text"></i>
+                  <i class="fa-solid fa-envelope  dark-gray-color-text"></i>
                 </div>
                 <div class="contact-info">
                   <p>Email Address</p>
@@ -784,7 +795,7 @@
                 </div>
               </div>
             </div>
-            <div class="our-comunity linear-gradient-bg p-5 d-flex flex-column gap-3 rounded-4">
+            <div class="our-comunity linear-gradient-bg p-3 p-sm-5 d-flex flex-column gap-3 rounded-4">
               <p class="dark-gray-color-text">Join Our Community</p>
               <span class="dark-gray-color-text">Connect with us on social media for the latest updates</span>
               <div class="socials d-flex align-items-center gap-3">
@@ -806,7 +817,7 @@
           <div class="col-lg-6 col-md-12">
             <form action="" class="dark-gray-color-4-bg p-4 rounded-4 d-flex flex-column gap-3">
               <h3>Send us a Message</h3>
-              <div class="inputs d-flex align-items-center justify-content-between gap-3">
+              <div class="inputs d-flex flex-column flex-sm-row align-items-center justify-content-between gap-3">
                 <div class="mb-3 w-100">
                   <label for="first-name" class="form-label">First Name</label>
                   <input type="text" class="form-control dark-gray-color-2-bg" id="first-name"
@@ -835,7 +846,32 @@
               </div>
               <div class="mb-3">
                 <label for="massege" class="form-label">Example textarea</label>
-                <textarea class="form-control dark-gray-color-2-bg" id="massege" placeholder="Tell Us How We 1can Help You......" rows="5"></textarea>
+                <textarea class="form-control dark-gray-color-2-bg" id="massege"
+                  placeholder="Tell Us How We 1can Help You......" rows="5"></textarea>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="checkDefault">
+                <label class="form-check-label" for="checkDefault">
+                  Subscribe to our newsletter for gaming updates
+                </label>
+              </div>
+              <button type="submit" class="btn p-3 primary-color-bg dark-gray-color-text">
+                Send Message
+                <i class="fa-solid fa-paper-plane"></i>
+              </button>
+              <div class="statistics d-flex align-items-center justify-content-around gap-3 pt-4 ">
+                <div class="d-flex flex-column gap-1 align-items-center">
+                  <span class="primary-color-text">
+                    24/7
+                  </span>
+                  <p>Support Available</p>
+                </div>
+                <div class="d-flex flex-column gap-1 align-items-center">
+                  <span class="primary-color-text">
+                    &lt;1hr
+                  </span>
+                  <p>Average Response</p>
+                </div>
               </div>
             </form>
           </div>
@@ -843,7 +879,115 @@
         </div>
       </div>
     </section>
-    <script src="/js/bootstrap.bundle.min.js"></script>
+    <!--------- footer --------->
+    <footer class="footer footer-color-bg ">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="d-flex flex-column justify-content-start gap-4">
+              <div class="footer-logo d-flex align-items-center">
+                <i class="fa-solid fa-gamepad mx-2 primary-color-text fs-4"></i>
+                <span class="primary-color-text">GameArena</span>
+              </div>
+              <p class="footer-description">The ultimate destination for competitive gaming, esports tournaments, and
+                gaming community.</p>
+              <div class="socials d-flex gap-3 align-items-center fs-5">
+                <i class="fa-brands fa-x-twitter"></i>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-youtube"></i>
+                <i class="fa-brands fa-twitch"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12 d-flex flex-column gap-3 justify-content-start">
+            <h3>Games</h3>
+            <ul class="p-0 d-flex flex-column gap-3">
+              <li>
+                <a href="#our-games">Valorant</a>
+              </li>
+              <li>
+                <a href="#our-games">League of Legends</a>
+              </li>
+              <li>
+                <a href="#our-games">Gs:Go</a>
+              </li>
+              <li>
+                <a href="#our-games">Dota 2</a>
+              </li>
+              <li>
+                <a href="#our-games">Abex Legends</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12 d-flex flex-column gap-3 justify-content-start">
+            <h3>Tournaments</h3>
+            <ul class="p-0 d-flex flex-column gap-3">
+              <li>
+                <a href="#">Upcoming Events</a>
+              </li>
+              <li>
+                <a href="#">Live Matches</a>
+              </li>
+              <li>
+                <a href="#">Results</a>
+              </li>
+              <li>
+                <a href="#">Rankings</a>
+              </li>
+              <li>
+                <a href="#">Schedule</a>
+              </li>
+
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12 d-flex flex-column gap-3 justify-content-start">
+            <h3>Support</h3>
+            <ul class="p-0 d-flex flex-column gap-3">
+              <li>
+                <a href="#">Help Center</a>
+              </li>
+              <li>
+                <a href="#">Contact Us</a>
+              </li>
+              <li>
+                <a href="#">Bug Report</a>
+              </li>
+              <li>
+                <a href="#">Feature Requests</a>
+              </li>
+              <li>
+                <a href="#">Community Guidelines</a>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom row mt-5 pt-4">
+          <div class="col-lg-6 col-sm-12">
+            <div class="copy-right">
+              <p>© 2025 GameArena. All rights reserved.</p>
+            </div>
+          </div>
+          <div class="col-lg-6 col-sm-12">
+            <div class="policy">
+              <ul class="d-flex gap-3 justify-content-end p-0">
+                <li>
+                  <a href="#">Privacy Policy</a>
+                </li>
+                <li>
+                  <a href="#">Terms of Service</a>
+                </li>
+                <li>
+                  <a href="#">Cookie Policy</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/bootstrap.bundle.min.js"></script>
   </body>
 
 </html>
